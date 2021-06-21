@@ -61,22 +61,10 @@ module.exports = {
     },
     logout: (req, res) => {
         try {
-            const payload = {
-                id: req.user.id,
-                email: req.user.email
-            }
-    
-            const token = jwt.sign(payload, process.env.AUTH_SECRET_KEY, {
-                expiresIn: '1'
-            });
-            res.cookie('token', token);
-            res.clearCookie('token');
-   
-            successResponse(res, 'Logged out', token);
-            
+            res.cookie('token', '', { maxAge: 1 });
+            successResponse(res, 'Logged out');
         } catch (error) {
            errorResponse(res, 500, error);
         }
-
     },
 }

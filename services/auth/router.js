@@ -4,7 +4,7 @@ const controller = require('../../controllers/auth');
 
 router.post('/register', controller.register)
       .post('/login', controller.login)
-      .post('/logout', controller.logout)
+      .get('/logout', controller.logout)
 
 
 module.exports = router;
