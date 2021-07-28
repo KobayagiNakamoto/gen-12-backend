@@ -9,7 +9,7 @@ require('dotenv').config();
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://petar:petar@cluster0.qznuq.mongodb.net/test123?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
