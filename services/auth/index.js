@@ -39,6 +39,6 @@ app.use((err, req, res, next) => {
 
 app.use('/', authRouter)
 
-app.listen(process.env.AUTH_PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log('Auth is started on port 3001');
 })
