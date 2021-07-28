@@ -15,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon services/auth "
+    "start": "node services/auth/index.js"
   },
   "repository": {
     "type": "git",
